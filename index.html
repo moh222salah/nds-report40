@@ -104,9 +104,10 @@ document.getElementById('reportFrame').addEventListener('load',function(){
             axis.remove();
           }
           const order=['الحالة السابقة','التشخيص','الإجراء الهندسي','النتيجة'];
-          order.forEach(label=>{const row=rowFor(label);if(row)body.appendChild(row);});
+          const ordered=order.map(rowFor).filter(Boolean);
+          if(ordered.some((row,index)=>body.children[index]!==row))ordered.forEach(row=>body.appendChild(row));
           const proof=card.querySelector('.tk-proof'),status=card.querySelector('.tk-status'),foot=card.querySelector('.tk-foot');
-          if(foot&&proof&&status){foot.append(proof,status);}
+          if(foot&&proof&&status&&(foot.firstElementChild!==proof||foot.lastElementChild!==status))foot.replaceChildren(proof,status);
         });
       };
       organize();
