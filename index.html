@@ -20,10 +20,10 @@ main{padding-top:40px;padding-bottom:52px}.section{margin-top:42px}.section:firs
 .full-report-flow{margin-top:8px!important;padding:0}.detail-frame{display:block;width:100%;height:1200px;min-height:0;border:0;background:transparent;overflow:hidden}
 footer{margin-top:55px;padding-top:15px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:15px;font-size:11px;color:var(--mut)}footer strong{color:var(--g8)}
 @media(max-width:800px){.summary-grid{grid-template-columns:1fr}.roadmap{grid-template-columns:1fr}.hero{min-height:470px}.section-head{align-items:flex-start;flex-direction:column}.detail-head{align-items:flex-start;flex-direction:column}}
-/* Desktop: one full-frame image at a time, followed by a horizontal RTL wipe. */
+/* Desktop: show the full horizontal width of each screenshot; crop only its vertical overflow. */
 @media(min-width:521px){
   #screenComparison{isolation:isolate;aspect-ratio:16/9;min-height:0}
-  #screenComparison .hero-image{inset:0;width:100%;height:100%;max-width:100%;max-height:100%;margin:0;padding:8px;object-fit:contain;object-position:center;background:#07140f;opacity:1;transform:none;animation:none}
+  #screenComparison .hero-image{inset:0;width:100%;height:100%;max-width:100%;max-height:100%;margin:0;padding:0;object-fit:cover;object-position:center top;background:#07140f;opacity:1;transform:none;animation:none}
   #screenComparison .screen-before{z-index:1;clip-path:inset(0);animation:beforeFullCycle 5s linear infinite}
   #screenComparison .screen-after{z-index:2;clip-path:inset(0 0 0 100%);animation:afterWipeCycle 5s linear infinite}
   #screenComparison:after{content:"";position:absolute;z-index:4;top:0;bottom:0;left:0;width:3px;background:linear-gradient(180deg,transparent,#f5dc91 12%,#d4af37 50%,#f5dc91 88%,transparent);box-shadow:0 0 10px 2px #d4af37,0 0 24px #d4af3790;opacity:0;pointer-events:none;animation:horizontalWipeLine 5s linear infinite}
@@ -45,11 +45,13 @@ footer{margin-top:55px;padding-top:15px;border-top:1px solid var(--line);display
 @keyframes beforeLabelCycle{0%,39.99%{opacity:1}40%,100%{opacity:0}}
 @keyframes afterLabelCycle{0%,59.99%{opacity:0}60%,100%{opacity:1}}
 @media(prefers-reduced-motion:reduce) and (min-width:521px){
-  #screenComparison .hero-image{animation:none;clip-path:none;opacity:1}
+  #screenComparison .screen-before{animation:none;opacity:0}
+  #screenComparison .screen-after{animation:none;clip-path:none;opacity:1}
   #screenComparison:after{display:none}
-  #screenComparison .screen-phase{animation:none;opacity:1}
+  #screenComparison .phase-before{animation:none;opacity:0}
+  #screenComparison .phase-after{animation:none;opacity:1}
 }
-@keyframes screenBeforeCycle{0%,46%{opacity:1;transform:scale(1)}50%,100%{opacity:0;transform:scale(1.018)}}@keyframes screenAfterCycle{0%,48%{opacity:0;transform:scale(1.018)}52%,96%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1.018)}}@keyframes phaseBeforeCycle{0%,44%{opacity:1}49%,100%{opacity:0}}@keyframes phaseAfterCycle{0%,50%{opacity:0}55%,95%{opacity:1}100%{opacity:0}}@media(prefers-reduced-motion:reduce){.hero-image,.screen-phase{animation:none}.screen-before,.phase-before{opacity:0}.screen-after,.phase-after{opacity:1}}@media(max-width:520px){.screen-showcase{margin-top:20px}.screen-device{padding:9px 9px 0;border-radius:17px 17px 9px 9px}.screen-view{aspect-ratio:16/9}.screen-chin{height:18px}.screen-tools{gap:5px;margin-top:10px}.screen-tool{min-height:40px;padding:6px 3px;gap:4px;flex-direction:column}.screen-tool svg{width:16px;height:16px}.screen-tool small{font-size:8px}.wrap{padding-inline:15px}.mast-inner{font-size:10px}.mast-label{font-size:11px}.hero .wrap{padding-top:42px;padding-bottom:36px}h1{font-size:clamp(16px,4.8vw,27px);letter-spacing:-.04em}.hero-image{max-height:none;margin:0;padding:0;border-radius:0}.hero-foot{align-items:flex-start;flex-direction:column}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.metric{padding:14px}.metric-value{font-size:23px}.metric-note{font-size:10px}.card{padding:17px}.grid .status{grid-column:1/-1}.detail-frame{height:1200px;min-height:0}footer{flex-direction:column}}
+@keyframes screenBeforeCycle{0%,46%{opacity:1;transform:scale(1)}50%,100%{opacity:0;transform:scale(1.018)}}@keyframes screenAfterCycle{0%,48%{opacity:0;transform:scale(1.018)}52%,96%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1.018)}}@keyframes phaseBeforeCycle{0%,44%{opacity:1}49%,100%{opacity:0}}@keyframes phaseAfterCycle{0%,50%{opacity:0}55%,95%{opacity:1}100%{opacity:0}}@media(prefers-reduced-motion:reduce){.hero-image,.screen-phase{animation:none}.screen-before,.phase-before{opacity:0}.screen-after,.phase-after{opacity:1}}@media(max-width:520px){.screen-showcase{margin-top:20px}.screen-device{padding:9px 9px 0;border-radius:17px 17px 9px 9px}.screen-view{aspect-ratio:auto;height:auto;min-height:180px}.screen-view .hero-image{inset:0;width:100%;height:100%;max-width:100%;max-height:none;object-fit:contain;object-position:center top;padding:0;margin:0}.screen-chin{height:18px}.screen-tools{gap:5px;margin-top:10px}.screen-tool{min-height:40px;padding:6px 3px;gap:4px;flex-direction:column}.screen-tool svg{width:16px;height:16px}.screen-tool small{font-size:8px}.wrap{padding-inline:15px}.mast-inner{font-size:10px}.mast-label{font-size:11px}.hero .wrap{padding-top:42px;padding-bottom:36px}h1{font-size:clamp(16px,4.8vw,27px);letter-spacing:-.04em}.hero-image{max-height:none;margin:0;padding:0;border-radius:0}.hero-foot{align-items:flex-start;flex-direction:column}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.metric{padding:14px}.metric-value{font-size:23px}.metric-note{font-size:10px}.card{padding:17px}.grid .status{grid-column:1/-1}.detail-frame{height:1200px;min-height:0}footer{flex-direction:column}}
 @media(prefers-color-scheme:dark){body{color:var(--ink)}}@media print{.actions{display:none}.detail-frame{height:auto;min-height:0}}
 </style></head>
 <body>
@@ -113,19 +115,35 @@ document.getElementById('reportFrame').addEventListener('load',function(){
       const tabs=doc.querySelectorAll('#htabs .ht');
       const beforeTarget=document.getElementById('reportCoverBefore');
       const afterTarget=document.getElementById('reportCoverAfter');
-      if(tabs.length>1&&beforeTarget&&afterTarget){
-        tabs[1].click();
-        const beforeShot=doc.querySelector('#hs .ib');
-        const afterShot=doc.querySelector('#hs .ia');
-        if(beforeShot&&afterShot){
-          beforeTarget.src=beforeShot.currentSrc||beforeShot.src;
-          afterTarget.src=afterShot.currentSrc||afterShot.src;
-        }
-        tabs[0].click();
-      }else{
-        const target=document.getElementById('reportCoverAfter');
-        if(target)target.src=image.currentSrc||image.src;
-      }
+      const frameView=document.getElementById('screenComparison');
+      const copyImageSource=(source,target)=>{
+        if(!source||!target)return false;
+        const url=source.currentSrc||source.getAttribute('src')||source.src;
+        if(!url||url==='about:blank')return false;
+        target.src=url;
+        const fitMobileFrame=()=>{
+          if(window.matchMedia('(max-width:520px)').matches&&target.naturalWidth&&target.naturalHeight&&frameView){
+            frameView.style.aspectRatio=target.naturalWidth+'/'+target.naturalHeight;
+            frameView.style.minHeight='0';
+          }
+        };
+        if(target.complete)fitMobileFrame();else target.addEventListener('load',fitMobileFrame,{once:true});
+        return true;
+      };
+      const captureShots=async()=>{
+        if(tabs.length>1&&beforeTarget&&afterTarget){
+          tabs[1].click();
+          await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));
+          const beforeShot=doc.querySelector('#hs .ib');
+          const afterShot=doc.querySelector('#hs .ia');
+          const beforeOK=copyImageSource(beforeShot,beforeTarget);
+          const afterOK=copyImageSource(afterShot,afterTarget);
+          if(!beforeOK)copyImageSource(image,beforeTarget);
+          if(!afterOK)copyImageSource(image,afterTarget);
+          tabs[0].click();
+        }else if(afterTarget)copyImageSource(image,afterTarget);
+      };
+      captureShots();
     }
     if(cover)cover.remove();
     const ticker=body.querySelector('.tick');if(ticker)ticker.remove();
