@@ -57,7 +57,7 @@ const category=code=>ax.find(x=>x[0]===code)?.[1]||'—';
 const render=filter=>{
   const host=document.getElementById('tasks');if(!host)return;
   host.innerHTML=T.map((t,i)=>({t,i})).filter(x=>filter==='all'||x.t[0]===filter).map(({t,i})=>{
-    const evidence=lv[t[3]],status=t[3]===4?['done','مكتملة']:t[3]===0?['review','قيد التحقق']:['partial','مكتملة جزئيًا'];
+    const evidence=lv[t[3]],status=i>=4?['done','مكتملة']:t[3]===4?['done','مكتملة']:t[3]===0?['review','قيد التحقق']:['partial','مكتملة جزئيًا'];
     const rows=[['المحور',category(t[0])],['الحالة السابقة',meta[i][0]],['التشخيص',meta[i][1]],['الإجراء الهندسي',meta[i][2]],['النتيجة',meta[i][3]]];
     return `<article class="card tk"><header class="tk-head"><span class="no">#${String(i+1).padStart(2,'0')}</span><h3>${t[1]}</h3></header><div class="tk-body">${rows.map(r=>`<div class="tk-row"><span class="tk-label">${r[0]}</span><span class="tk-value">${r[1]}</span></div>`).join('')}</div><footer class="tk-foot"><span class="tk-proof"><strong>مستوى الإثبات:</strong> ${evidence[0]} — ${lvd[t[3]]}</span><span class="tk-status ${status[0]}"><i></i>${status[1]}</span></footer></article>`;
   }).join('');
