@@ -70,8 +70,7 @@ document.getElementById('reportFrame').addEventListener('load',function(){
     const toc=body.querySelector('section#toc');
     const ticker=body.querySelector('.tick');
     if(cover&&toc&&cover!==toc){
-      toc.parentNode.insertBefore(cover,toc);
-      if(ticker&&ticker.parentNode===body) toc.parentNode.insertBefore(ticker,cover.nextSibling);
+      toc.parentNode.insertBefore(toc,cover);
     }
   }catch(e){ console.warn('Report page ordering could not be applied.',e); }
 });
