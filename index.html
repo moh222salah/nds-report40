@@ -79,25 +79,7 @@ document.getElementById('reportFrame').addEventListener('load',function(){
     };
     const enhance=doc.createElement('script');
     enhance.src='engineering-log-enhance.js';
-    enhance.onload=()=>{
-      const logHeading=Array.from(doc.querySelectorAll('h2')).find(el=>el.textContent.trim()==='سجل الأعمال الهندسية');
-      if(logHeading)logHeading.textContent='سجل الإنجازات التقنية';
-      const finalLayout=doc.createElement('style');
-      finalLayout.textContent=`
-        #task-layout{display:grid;grid-template-columns:230px minmax(0,1fr);gap:20px;align-items:start;direction:rtl}
-        #task-sidebar{position:sticky;top:18px;align-self:start}
-        #task-sidebar:before{content:'محاور سجل الإنجازات التقنية'}
-        #task-content{min-width:0}
-        #tasks{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;align-items:stretch}
-        @media(max-width:760px){
-          #task-layout{grid-template-columns:1fr;gap:12px}
-          #task-sidebar{position:static}
-          #task-sidebar .flt{flex-direction:row;flex-wrap:wrap}
-          #tasks{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-        }`;
-      doc.head.appendChild(finalLayout);
-      fit();
-    };
+    enhance.onload=()=>fit();
     doc.head.appendChild(enhance);
     fit();
     new ResizeObserver(fit).observe(body);
