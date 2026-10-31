@@ -17,10 +17,10 @@ main{padding-top:40px;padding-bottom:52px}.section{margin-top:42px}.section:firs
 .status{border-top:3px solid var(--g8)}.status.review{border-color:var(--gold)}.status.future{border-color:#8b9c8f}.status-title{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:10px}.status h3{font-size:16px;font-weight:600}.state{font-size:10px;border-radius:99px;padding:3px 10px;white-space:nowrap}.state.done{background:#e7f3eb;color:#236342}.state.review{background:#fbf0d3;color:#8b6916}.state.future{background:#e9eee9;color:#52655a}
 .roadmap{grid-template-columns:repeat(3,minmax(0,1fr))}.road{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:21px;box-shadow:var(--sh);position:relative;overflow:hidden}.road:before{content:"";position:absolute;inset:0 0 auto;height:3px;background:linear-gradient(90deg,var(--g8),var(--gold))}.road-month{font:700 11px 'Space Grotesk';letter-spacing:.1em;color:var(--goldt)}.road h3{font-size:16px;font-weight:600;margin:7px 0 8px}.road p{font-size:12px;color:var(--mut)}
 .actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:19px}.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:99px;padding:9px 18px;font:600 12px 'Readex Pro';transition:.18s}.btn:hover{transform:translateY(-1px)}.btn-primary{background:var(--gold);color:#1b1608;border:1px solid var(--gold);font-weight:700}.btn-secondary{background:transparent;color:var(--g8);border:1px solid var(--line)}
-.detail{border:1px solid var(--line);border-radius:22px;background:var(--card);overflow:hidden;box-shadow:var(--sh)}.detail-head{display:flex;justify-content:space-between;align-items:center;gap:15px;padding:18px 22px;background:var(--sand);border-bottom:1px solid var(--line)}.detail-head h3{font-size:16px;color:var(--g8);margin:0}.detail-head p{font-size:11px;color:var(--mut)}.detail-frame{display:block;width:100%;height:100vh;min-height:850px;border:0;background:var(--bg)}
+.full-report-flow{margin-top:8px!important;padding:0}.detail-frame{display:block;width:100%;height:1200px;min-height:0;border:0;background:transparent;overflow:hidden}
 footer{margin-top:55px;padding-top:15px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:15px;font-size:11px;color:var(--mut)}footer strong{color:var(--g8)}
 @media(max-width:800px){.summary-grid{grid-template-columns:1fr}.roadmap{grid-template-columns:1fr}.hero{min-height:470px}.section-head{align-items:flex-start;flex-direction:column}.detail-head{align-items:flex-start;flex-direction:column}}
-@media(max-width:520px){.wrap{padding-inline:15px}.mast-inner{font-size:10px}.mast-label{font-size:11px}.hero .wrap{padding-top:42px;padding-bottom:36px}h1{font-size:clamp(16px,4.8vw,27px);letter-spacing:-.04em}.hero-image{max-height:none;margin-top:20px;padding:5px;border-radius:17px}.hero-foot{align-items:flex-start;flex-direction:column}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.metric{padding:14px}.metric-value{font-size:23px}.metric-note{font-size:10px}.card{padding:17px}.grid .status{grid-column:1/-1}.detail-frame{height:82vh;min-height:650px}footer{flex-direction:column}}
+@media(max-width:520px){.wrap{padding-inline:15px}.mast-inner{font-size:10px}.mast-label{font-size:11px}.hero .wrap{padding-top:42px;padding-bottom:36px}h1{font-size:clamp(16px,4.8vw,27px);letter-spacing:-.04em}.hero-image{max-height:none;margin-top:20px;padding:5px;border-radius:17px}.hero-foot{align-items:flex-start;flex-direction:column}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.metric{padding:14px}.metric-value{font-size:23px}.metric-note{font-size:10px}.card{padding:17px}.grid .status{grid-column:1/-1}.detail-frame{height:1200px;min-height:0}footer{flex-direction:column}}
 @media(prefers-color-scheme:dark){body{color:var(--ink)}}@media print{.actions{display:none}.detail-frame{height:auto;min-height:0}}
 </style></head>
 <body>
@@ -59,22 +59,32 @@ footer{margin-top:55px;padding-top:15px;border-top:1px solid var(--line);display
 <article class="road"><div class="road-month">MONTH 02</div><h3>التكامل والموثوقية</h3><p>اختبار مترابط للفواتير والمدفوعات وقيود Payment Entry والتصدير والتخصيصات، ثم قياس تراجع المشكلات المتكررة.</p></article>
 <article class="road"><div class="road-month">MONTH 03</div><h3>الإنتاجية والتحسين المستمر</h3><p>تحسين لوحات العمل والعمليات المختارة، وتوثيق زمن الإنجاز ومؤشرات الجودة ومراجعة الأثر الفعلي.</p></article>
 </div></section>
-<section class="section" id="full-report"><div class="section-head"><div><div class="section-k">05 · COMPLETE ENGINEERING DOCUMENT</div><h2>التقرير الهندسي التفصيلي</h2><p>المحتوى الأصلي الكامل محفوظ كما هو، بما في ذلك الأقسام والسجل الهندسي والصور والمقارنات.</p></div><span class="pill">Full report</span></div>
-<div class="detail"><iframe class="detail-frame" id="reportFrame" src="full-report.html" title="التقرير الهندسي والتقني الكامل لمنظومة NDS ERP Saudi" loading="lazy"></iframe></div></section>
+<section class="section full-report-flow" id="full-report"><iframe class="detail-frame" id="reportFrame" src="full-report.html" title="التقرير الهندسي والتقني الكامل لمنظومة NDS ERP Saudi" loading="lazy" scrolling="no"></iframe></section>
 <footer><span><strong>NDS ERP Saudi</strong> · Engineering & Technical Report</span><span>20 سبتمبر — 30 أكتوبر 2026 · Saudi scope only</span></footer>
 </main><script>
-/* Reuse the report's original cover visual, remove the cover page, and keep the contents page first. */
+/* Seamless full-document flow: remove the old cover and let the parent page own scrolling. */
 document.getElementById('reportFrame').addEventListener('load',function(){
   try{
-    const doc=this.contentDocument, body=doc.body;
+    const frame=this,doc=frame.contentDocument,body=doc.body,root=doc.documentElement;
     const cover=body.querySelector('section.pg.cover');
     const image=cover&&cover.querySelector('#hi');
     const target=document.getElementById('reportCoverVisual');
-    if(image&&target) target.src=image.currentSrc||image.src;
-    if(cover) cover.remove();
-    const ticker=body.querySelector('.tick');
-    if(ticker) ticker.remove();
-  }catch(e){ console.warn('The report cover image or page could not be adjusted.',e); }
+    if(image&&target)target.src=image.currentSrc||image.src;
+    if(cover)cover.remove();
+    const ticker=body.querySelector('.tick');if(ticker)ticker.remove();
+    frame.setAttribute('scrolling','no');
+    const fit=()=>{
+      const height=Math.max(body.scrollHeight,root.scrollHeight,body.offsetHeight,root.offsetHeight);
+      if(height)frame.style.height=(height+4)+'px';
+    };
+    fit();
+    new ResizeObserver(fit).observe(body);
+    new MutationObserver(fit).observe(body,{childList:true,subtree:true,attributes:true});
+    body.addEventListener('load',fit,true);
+    if(doc.fonts&&doc.fonts.ready)doc.fonts.ready.then(fit);
+    Array.from(body.images).forEach(img=>{if(!img.complete)img.addEventListener('load',fit,{once:true});});
+    window.addEventListener('resize',fit,{passive:true});
+  }catch(e){console.warn('The report document could not be expanded seamlessly.',e);}
 });
 </script>
 </body></html>
