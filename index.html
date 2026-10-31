@@ -77,6 +77,10 @@ document.getElementById('reportFrame').addEventListener('load',function(){
       const height=Math.max(body.scrollHeight,root.scrollHeight,body.offsetHeight,root.offsetHeight);
       if(height)frame.style.height=(height+4)+'px';
     };
+    const enhance=doc.createElement('script');
+    enhance.src='engineering-log-enhance.js';
+    enhance.onload=()=>fit();
+    doc.head.appendChild(enhance);
     fit();
     new ResizeObserver(fit).observe(body);
     new MutationObserver(fit).observe(body,{childList:true,subtree:true,attributes:true});
