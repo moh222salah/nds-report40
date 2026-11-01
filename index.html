@@ -436,7 +436,7 @@ footer b{color:var(--gold2)}
 <header class="nav" id="nav"><div class="w nav-in">
 <a class="logo" href="#top"><span class="mark">N</span><b>NDS ERP</b></a>
 <nav class="chs" id="chs" aria-label="فصول التقرير">
-<a href="#s1"><i></i><span>الخلاصة</span></a><a href="#s2"><i></i><span>الرحلة</span></a><a href="#s3"><i></i><span>البداية</span></a><a href="#s4"><i></i><span>الواجهة</span></a><a href="#s5"><i></i><span>الفواتير</span></a><a href="#s6"><i></i><span>الدفع</span></a><a href="#s7"><i></i><span>الحماية</span></a><a href="./database-recovery.html"><i></i><span>بيئة الاختبار</span></a><a href="#s8"><i></i><span>الشفافية</span></a><a href="#s9"><i></i><span>الطريق</span></a><a href="#s11"><i></i><span>الملاحق</span></a><a href="#s10"><i></i><span>الختام</span></a>
+<a href="#s1"><i></i><span>الخلاصة</span></a><a href="#s2"><i></i><span>الرحلة</span></a><a href="#s3"><i></i><span>البداية</span></a><a href="#s4"><i></i><span>الواجهة</span></a><a href="#s5"><i></i><span>الفواتير</span></a><a href="#s6"><i></i><span>الدفع</span></a><a href="#s7"><i></i><span>الحماية</span></a><a href="#s7b"><i></i><span>بيئة الاختبار</span></a><a href="#s8"><i></i><span>الشفافية</span></a><a href="#s9"><i></i><span>الطريق</span></a><a href="#s11"><i></i><span>الملاحق</span></a><a href="#s10"><i></i><span>الختام</span></a>
 </nav>
 <div class="tools"><button class="tbtn" id="vw" type="button" aria-pressed="false"><svg viewBox="0 0 24 24"><use href="#i-eye"/></svg><span class="lbl" id="vwl">عرض كامل</span></button><button class="tbtn" id="th" type="button" aria-label="تبديل الثيم"><svg viewBox="0 0 24 24"><use href="#i-sun"/></svg></button></div>
 </div><div class="prog"><i id="bar"></i></div></header>
@@ -580,6 +580,10 @@ footer b{color:var(--gold2)}
 </div></div>
 <div class="tech"><b>للتقنيين</b><span>سلسلة الإثبات: التزام المصدر ← البناء ← الملف المقدَّم ← نتيجة المتصفح. المسار: تدقيق ← سبب جذري ← نسخة احتياطية ← أقل إصلاح ← تحقق. يُنصح بنقل المستودع إلى حساب المؤسسة.</span></div>
 </div></section>
+
+<section class="ch" id="s7b" style="padding-block:0;overflow:visible">
+<iframe id="ndsRecoveryEmbed" src="./database-recovery.html" title="تجهيز بيئة اختبار مستقلة واستعادة البيانات بضوابط آمنة" loading="lazy" scrolling="no" style="display:block;width:100%;height:1800px;min-height:1400px;border:0;background:#faf7f0"></iframe>
+</section>
 
 <section class="ch" id="s8"><div class="w">
 <div class="chh rv"><span class="big num">08</span><span class="kick"><span class="pill">08</span>Transparency</span><h2>الصورة الصريحة: ما اكتمل وما لم يكتمل</h2>
@@ -841,4 +845,40 @@ let a=-1;secs.forEach((s,i)=>{if(s.getBoundingClientRect().top<innerHeight*.4)a=
 const r=tl.getBoundingClientRect(),f=Math.max(0,Math.min(1,(innerHeight*.6-r.top)/r.height));tl.style.setProperty('--fill',f);
 tis.forEach(t=>t.classList.toggle('on',t.getBoundingClientRect().top<innerHeight*.62))};
 addEventListener('scroll',()=>{if(!tk){tk=true;requestAnimationFrame(onS)}},{passive:true});onS();
+</script>
+
+
+<script>
+(() => {
+  const frame = document.getElementById('ndsRecoveryEmbed');
+  if (!frame) return;
+  const resize = () => {
+    try {
+      const doc = frame.contentDocument;
+      if (!doc) return;
+      const height = Math.ceil(Math.max(
+        doc.documentElement?.scrollHeight || 0,
+        doc.body?.scrollHeight || 0
+      ));
+      if (height > 0) frame.style.height = height + 'px';
+    } catch {
+      frame.style.height = '2400px';
+    }
+  };
+  frame.addEventListener('load', () => {
+    resize();
+    try {
+      const doc = frame.contentDocument;
+      if ('ResizeObserver' in window) {
+        const observer = new ResizeObserver(resize);
+        if (doc.documentElement) observer.observe(doc.documentElement);
+        if (doc.body) observer.observe(doc.body);
+        frame._ndsRecoveryObserver = observer;
+      }
+      if (doc.fonts?.ready) doc.fonts.ready.then(resize);
+    } catch {}
+    window.setTimeout(resize, 300);
+    window.setTimeout(resize, 1000);
+  });
+})();
 </script>
