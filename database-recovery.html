@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#062a1f">
+<meta name="description" content="توثيق تجهيز بيئة اختبار سعودية مستقلة ومنهجية رفع الأرشيف واستعادة قاعدة البيانات بضوابط حماية وتحقق واضحة.">
+<title>بيئة الاختبار واستعادة البيانات | NDS ERP Saudi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--g9:#062a1f;--g8:#0a4a3a;--g7:#0f6b50;--gold:#c9a84c;--gold2:#e6cd8b;--goldt:#967321;--bg:#faf7f0;--card:#fff;--sand:#f0e9d9;--ink:#12261f;--mut:#5d6b64;--line:#e4dfd0;--shadow:0 16px 40px -22px rgba(10,74,58,.35)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;background:var(--bg)}body{margin:0;font-family:'Readex Pro',Tahoma,system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.9}a{color:inherit;text-decoration:none}.topline{height:4px;background:linear-gradient(90deg,var(--g8),var(--gold),var(--g8))}
+.wrap{width:min(1080px,100% - 36px);margin:auto}.nav{background:var(--g9);color:#f6f1e4;border-bottom:1px solid #c9a84c55}.nav-in{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:15px}.brand{display:flex;align-items:center;gap:10px;font:700 14px 'Space Grotesk',sans-serif;letter-spacing:.08em}.mark{width:34px;height:34px;display:grid;place-items:center;border:1px solid var(--gold);border-radius:10px;color:var(--gold2)}.back{font-size:12px;color:var(--gold2);border:1px solid #e6cd8b66;border-radius:99px;padding:7px 13px}
+.hero{position:relative;overflow:hidden;background:linear-gradient(145deg,#04140e,#0a4a3a 68%,#0d5a45);color:#f6f1e4;padding:68px 0 54px}.hero:after{content:"NDS";position:absolute;left:2%;top:-62px;color:#fff;opacity:.035;font:700 clamp(150px,28vw,310px)/1 'Space Grotesk';pointer-events:none}.hero .wrap{position:relative;z-index:1}.kicker{display:flex;align-items:center;gap:12px;color:var(--gold2);font-size:12px;letter-spacing:.08em}.kicker:before{content:"";width:46px;height:1px;background:var(--gold)}h1{margin:15px 0 14px;font-size:clamp(29px,5vw,49px);line-height:1.4;letter-spacing:-.035em}.hero p{max-width:760px;margin:0;color:#d2dfd7;font-size:15px}.hero-meta{display:flex;flex-wrap:wrap;gap:9px;margin-top:27px}.meta{border:1px solid #e6cd8b55;border-radius:99px;background:#ffffff0a;padding:6px 12px;color:#f0e4c2;font-size:11px}
+main{padding:34px 0 60px}.section{margin-top:36px}.section:first-child{margin-top:0}.head{display:flex;align-items:end;justify-content:space-between;gap:18px;margin-bottom:17px}.eyebrow{font:600 10px 'Space Grotesk',sans-serif;letter-spacing:.14em;color:var(--g7)}h2{margin:4px 0 4px;font-size:clamp(22px,3.4vw,30px);line-height:1.5}.head p{margin:0;max-width:710px;color:var(--mut);font-size:12px}.tag{flex:none;background:var(--sand);border:1px solid var(--line);border-radius:99px;padding:4px 12px;color:var(--goldt);font-size:11px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}.card{background:var(--card);border:1px solid var(--line);border-radius:19px;padding:20px;box-shadow:var(--shadow);min-width:0}.card h3{margin:0 0 8px;font-size:15px;color:var(--g8)}.card p{margin:0;color:var(--mut);font-size:12px}.icon{width:34px;height:34px;display:grid;place-items:center;border-radius:11px;background:var(--sand);color:var(--goldt);margin-bottom:12px}.icon svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.statusline{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.status{padding:16px 18px;border:1px solid var(--line);border-top:3px solid var(--g8);border-radius:15px;background:#fff}.status.pending{border-top-color:var(--gold)}.status-label{font-size:11px;color:var(--mut)}.status-value{margin-top:5px;font-size:14px;font-weight:700;color:var(--g8)}.status.pending .status-value{color:var(--goldt)}
+.flow{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;counter-reset:step}.step{position:relative;counter-increment:step;background:#fff;border:1px solid var(--line);border-radius:17px;padding:17px 14px;min-width:0}.step:before{content:counter(step,decimal-leading-zero);display:block;margin-bottom:12px;color:var(--goldt);font:700 12px 'Space Grotesk'}.step:not(:last-child):after{content:"";position:absolute;left:-11px;top:28px;width:11px;border-top:1px solid var(--gold)}.step h3{margin:0 0 6px;color:var(--g8);font-size:13px}.step p{margin:0;color:var(--mut);font-size:11px;line-height:1.8}
+.safety{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.safety-item{display:flex;align-items:flex-start;gap:12px;padding:16px;border:1px solid var(--line);border-radius:15px;background:#fff}.tick{flex:none;width:25px;height:25px;display:grid;place-items:center;border-radius:8px;background:#e8f2eb;color:#26714a;font-weight:700}.safety-item strong{display:block;margin-bottom:3px;color:var(--g8);font-size:12px}.safety-item span{display:block;color:var(--mut);font-size:11px}
+.note{margin-top:15px;padding:16px 18px;border:1px solid #d9c17b;border-radius:16px;background:#fbf5e6;color:#6e581d;font-size:12px}.note strong{display:block;margin-bottom:4px;color:#72591b}
+.value{display:grid;grid-template-columns:1.1fr .9fr;gap:15px}.value .card{height:100%}.bullets{display:grid;gap:10px;margin-top:13px}.bullet{display:flex;gap:10px;color:var(--mut);font-size:12px}.bullet:before{content:"";flex:none;width:7px;height:7px;margin-top:8px;border-radius:50%;background:var(--gold)}
+footer{padding:20px 0;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:12px;color:var(--mut);font-size:10px}footer strong{color:var(--g8)}
+@media(max-width:800px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.flow{grid-template-columns:repeat(2,minmax(0,1fr))}.step:after{display:none}.value{grid-template-columns:1fr}}
+@media(max-width:560px){.wrap{width:min(100% - 28px,1080px)}.nav-in{min-height:58px}.hero{padding:48px 0 38px}.hero p{font-size:13px}.head{align-items:flex-start;flex-direction:column;gap:7px}.grid,.statusline,.safety,.flow{grid-template-columns:1fr}.card{padding:17px}.step{padding:15px}.hero-meta{gap:7px}.meta{font-size:10px}footer{flex-direction:column}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="topline"></div>
+<header class="nav"><div class="wrap nav-in"><a class="brand" href="./"><span class="mark">N</span><span>NDS ERP · SAUDI</span></a><a class="back" href="./">العودة إلى التقرير الشهري ←</a></div></header>
+<section class="hero"><div class="wrap">
+<div class="kicker">ENGINEERING DELIVERY · TEST ENVIRONMENT</div>
+<h1>تجهيز بيئة اختبار مستقلة<br><span style="color:var(--gold2)">واستعادة البيانات بضوابط آمنة</span></h1>
+<p>خطوة تشغيلية تعزز موثوقية التطوير والاختبار: تجهيز نسخة سعودية مستقلة دون بيانات النظام، مع مسار منضبط وقابل لإعادة الاستخدام لرفع أرشيف قاعدة البيانات واستعادته والتحقق منه دون المساس ببيئة الإنتاج.</p>
+<div class="hero-meta"><span class="meta">النطاق: النسخة السعودية</span><span class="meta">بيئة اختبار معزولة</span><span class="meta">نسخة البيانات مستقلة عن ملفات الموقع</span></div>
+</div></section>
+<main class="wrap">
+<section class="section"><div class="head"><div><div class="eyebrow">01 · DELIVERY STATUS</div><h2>ما الذي تم تجهيزه؟</h2><p>فصل بيئة الاختبار عن بيانات التشغيل الفعلية، وتجهيز دورة واضحة للتعامل مع أرشيف قاعدة البيانات.</p></div><span class="tag">ملخص الإنجاز</span></div>
+<div class="statusline">
+<div class="status"><div class="status-label">بيئة الاختبار</div><div class="status-value">تم الرفع والتجهيز</div></div>
+<div class="status"><div class="status-label">بيانات النظام التشغيلية</div><div class="status-value">مستبعدة من النسخة المرفوعة</div></div>
+<div class="status pending"><div class="status-label">الاستعادة والتحقق النهائي</div><div class="status-value">مسار مُعدّ · ينتظر توثيق نتيجة التنفيذ</div></div>
+</div></section>
+<section class="section"><div class="head"><div><div class="eyebrow">02 · ENGINEERING APPROACH</div><h2>منهجية نقل الأرشيف واستعادة قاعدة البيانات</h2><p>دورة تشغيلية محددة المراحل، تبدأ من التحقق من الأرشيف ولا تسمح بالكتابة قبل اجتياز فحوصات السلامة.</p></div><span class="tag">Controlled workflow</span></div>
+<div class="flow">
+<article class="step"><h3>رفع الأرشيف</h3><p>نقل نسخة الأرشيف وملف بصمتها إلى مساحة استقبال محمية، ثم التحقق من سلامة النقل.</p></article>
+<article class="step"><h3>تحديد الوجهة</h3><p>مطابقة بيئة الهدف مع النطاق المصرح به، واستبعاد بيئة الإنتاج من العملية.</p></article>
+<article class="step"><h3>نسخة أمان مسبقة</h3><p>إنشاء نسخة احتياطية مستقلة للهدف والتحقق من صلاحيتها قبل أي كتابة.</p></article>
+<article class="step"><h3>استعادة قاعدة البيانات</h3><p>استعادة بيانات قاعدة البيانات فقط، دون استبدال ملفات الموقع أو مرفقاته.</p></article>
+<article class="step"><h3>التحقق وخطة الرجوع</h3><p>مراجعة سلامة الجداول والكيانات الأساسية، مع الاحتفاظ بنقطة تراجع قابلة للاستعادة.</p></article>
+</div></section>
+<section class="section"><div class="head"><div><div class="eyebrow">03 · SAFETY CONTROLS</div><h2>ضوابط الحماية المعتمدة</h2><p>مجموعة حواجز تشغيلية تقلل احتمالات الاستعادة الخاطئة أو التأثير على بيئة غير مستهدفة.</p></div><span class="tag">Safety by design</span></div>
+<div class="grid">
+<article class="card"><div class="icon"><svg viewBox="0 0 24 24"><path d="M12 3 20 6v5c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/><path d="m8.5 12 2.2 2.2 4.8-5"/></svg></div><h3>حماية الإنتاج</h3><p>حظر صريح لبيئة الإنتاج ضمن قواعد اختيار الوجهة، مع عدم السماح بتجاوز هذا الحاجز بإضافة اسمها إلى قائمة الوجهات المسموح بها.</p></article>
+<article class="card"><div class="icon"><svg viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 1 1 8 0v3m-4 4v3"/></svg></div><h3>تأكيد قبل الكتابة</h3><p>العملية تبدأ بوضع آمن لا ينفذ أي كتابة، ولا تنتقل إلى الاستعادة إلا بعد تأكيد صريح ومراجعة شروط الهدف.</p></article>
+<article class="card"><div class="icon"><svg viewBox="0 0 24 24"><path d="M4 7h16M6 7l1 13h10l1-13M9 7V4h6v3"/><path d="m9 12 2 2 4-4"/></svg></div><h3>نسخة أمان قبل التغيير</h3><p>لا تبدأ الاستعادة قبل إنشاء نسخة احتياطية للهدف والتأكد من إمكانية قراءتها وسلامة أرشيفها.</p></article>
+<article class="card"><div class="icon"><svg viewBox="0 0 24 24"><path d="M4 5h16v14H4z"/><path d="M4 9h16M8 13h3m-3 3h8"/></svg></div><h3>عزل نطاق الاستعادة</h3><p>التغيير محصور في قاعدة البيانات؛ ملفات الموقع وإعدادات العرض ومرفقاته لا تُستبدل ضمن هذه العملية.</p></article>
+<article class="card"><div class="icon"><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 1 0 2.3-5.7L4 8"/><path d="M4 4v4h4m4-1v5l3 2"/></svg></div><h3>مسار تراجع واضح</h3><p>حفظ نسخة ما قبل الاستعادة وربطها بالوجهة، بما يتيح الرجوع إلى حالة الهدف السابقة عند الحاجة.</p></article>
+<article class="card"><div class="icon"><svg viewBox="0 0 24 24"><path d="M5 4h14v16H5z"/><path d="m8 12 2.5 2.5L16 9"/></svg></div><h3>تحقق بعد الاستعادة</h3><p>فحص سلامة الأرشيف والجداول الأساسية، ثم مراجعة استجابة البيئة المستهدفة قبل اعتماد النتيجة.</p></article>
+</div>
+<div class="note"><strong>ملاحظة توافق مهمة</strong>تتطلب الاستعادة توافق التطبيقات وإصداراتها بين المصدر والوجهة. كما أن الحقول المشفرة تعتمد على توافق إعدادات التشفير؛ وعند اختلافها قد لا تكون بعض القيم المشفرة قابلة للقراءة في البيئة المستهدفة. أي ترحيل بنيوي إضافي يخضع لإجراء مستقل ومراجعة قبل التنفيذ.</div>
+</section>
+<section class="section"><div class="head"><div><div class="eyebrow">04 · ACCEPTANCE CRITERIA</div><h2>معايير قبول النتيجة</h2><p>المؤشرات التي يجب توثيقها عند اكتمال دورة الاستعادة، دون الخلط بين تجهيز المسار ونجاح تنفيذه.</p></div><span class="tag">Verification gates</span></div>
+<div class="value">
+<article class="card"><h3>أدلة التحقق المطلوبة</h3><div class="bullets">
+<div class="bullet">تأكيد نجاح رفع الأرشيف ومطابقة بصمته.</div>
+<div class="bullet">إثبات إنشاء نسخة أمان سليمة للوجهة قبل الاستعادة.</div>
+<div class="bullet">تأكيد اكتمال استعادة قاعدة البيانات دون تغيير ملفات الموقع.</div>
+<div class="bullet">مراجعة وجود وسلامة كيانات النظام الأساسية بعد الاستعادة.</div>
+<div class="bullet">التأكد من بقاء بيئة الإنتاج خارج نطاق التغيير واستجابتها بصورة طبيعية.</div>
+</div></article>
+<article class="card"><h3>القيمة التشغيلية</h3><p>تحويل تجهيز بيئات الاختبار واستعادة البيانات من إجراء يدوي غير موحد إلى مسار واضح قابل للتكرار، مع تقليل احتمالات الخطأ، ورفع قابلية التحقق، وتوفير نقطة رجوع قبل أي تغيير مؤثر.</p><div class="note"><strong>شفافية حالة التنفيذ</strong>تم تجهيز ورفع بيئة الاختبار دون بيانات النظام التشغيلية. أما نجاح استعادة الأرشيف فيُثبت فقط بعد تسجيل مخرجات الرفع والنسخة الاحتياطية والاستعادة وفحوصات ما بعد التنفيذ.</div></article>
+</div></section>
+<footer><span><strong>NDS ERP Saudi</strong> · Engineering & Technical Report</span><span>بيئة اختبار مستقلة · استعادة بيانات محكومة</span></footer>
+</main>
+</body>
+</html>
