@@ -67,8 +67,9 @@ function patchTocEntry(source, id, oldNo, newNo, oldPage, newPage) {
 }
 
 function patchDockEntry(source, id, oldNo, newNo) {
-  const navOpen = '<nav aria-label="التنقل بين الأقسام" id="dock">';
-  const start = source.indexOf(navOpen);
+  const navOpen = 'id="dock"';
+  const markerAt = source.indexOf(navOpen);
+  const start = source.lastIndexOf("<nav", markerAt);
   if (start < 0) throw new Error("Full report dock not found");
   const close = source.indexOf("</nav>", start);
   if (close < 0) throw new Error("Full report dock closing tag not found");
