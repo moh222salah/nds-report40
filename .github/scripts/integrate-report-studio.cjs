@@ -36,7 +36,8 @@ function patchSectionNumber(source, id, oldNumber, newNumber, oldPill, newPill) 
 }
 
 function insertBeforeInNav(source, navOpen, navClose, linkId, newAnchor, label) {
-  const start = source.indexOf(navOpen);
+  const markerAt = source.indexOf(navOpen);
+  const start = navOpen.startsWith("id=") ? source.lastIndexOf("<nav", markerAt) : markerAt;
   if (start < 0) throw new Error(label + ": nav opening not found");
   const close = source.indexOf(navClose, start);
   if (close < 0) throw new Error(label + ": nav closing not found");
@@ -147,7 +148,7 @@ function fullReportPatch(source) {
   ];
   for (const item of tocNumbers) source = patchTocEntry(source, item[0], item[1], item[2], item[3], item[4]);
 
-  source = insertBeforeInNav(source, '<nav aria-label="التنقل بين الأقسام" id="dock">', "</nav>", "s5", '<a class="num" href="#s11">05</a>', "Full report dock");
+  source = insertBeforeInNav(source, 'id="dock"', "</nav>", "s5", '<a class="num" href="#s11">05</a>', "Full report dock");
   const dockNumbers = [["s5","05","06"],["s6","06","07"],["s7","07","08"],["s8","08","09"],["s9","09","10"],["s10","10","11"]];
   for (const item of dockNumbers) source = patchDockEntry(source, item[0], item[1], item[2]);
 
