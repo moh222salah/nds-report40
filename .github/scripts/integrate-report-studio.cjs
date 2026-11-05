@@ -30,7 +30,7 @@ function sectionBounds(source, id) {
 function patchSectionNumber(source, id, oldNumber, newNumber, oldPill, newPill) {
   const bounds = sectionBounds(source, id);
   let block = source.slice(bounds.start, bounds.end);
-  const headingPattern = /<(span|div)\\b[^>]*class="big num"[^>]*>(\\d{2})<\\/\\1>/g;
+  const headingPattern = /<(span|div)\b[^>]*class="big num"[^>]*>(\d{2})<\/\1>/g;
   const headings = [...block.matchAll(headingPattern)];
   if (headings.length !== 1) throw new Error("#" + id + " heading number: expected one match; found " + headings.length);
   if (headings[0][2] !== oldNumber) throw new Error("#" + id + " heading number mismatch: expected " + oldNumber + "; found " + headings[0][2]);
