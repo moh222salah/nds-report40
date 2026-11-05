@@ -30,7 +30,12 @@ function sectionBounds(source, id) {
 function patchSectionNumber(source, id, oldNumber, newNumber, oldPill, newPill) {
   const bounds = sectionBounds(source, id);
   let block = source.slice(bounds.start, bounds.end);
-  block = replaceExactlyOnce(block, '<span class="big num">' + oldNumber + "</span>", '<span class="big num">' + newNumber + "</span>", "#" + id + " heading number");
+  const headingPattern = /<(span|div)\\b[^>]*class="big num"[^>]*>(\\d{2})<\\/\\1>/g;
+  const headings = [...block.matchAll(headingPattern)];
+  if (headings.length !== 1) throw new Error("#" + id + " heading number: expected one match; found " + headings.length);
+  if (headings[0][2] !== oldNumber) throw new Error("#" + id + " heading number mismatch: expected " + oldNumber + "; found " + headings[0][2]);
+  const heading = headings[0][0];
+  block = block.replace(heading, heading.replace(">" + oldNumber + "</", ">" + newNumber + "</"));
   block = replaceExactlyOnce(block, '<span class="pill">' + oldPill + "</span>", '<span class="pill">' + newPill + "</span>", "#" + id + " page pill");
   return source.slice(0, bounds.start) + block + source.slice(bounds.end);
 }
