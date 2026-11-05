@@ -110,7 +110,7 @@ const mainPage = [
   '<div class="g2 sec"><article class="card rv"><h3>أثر المصمم داخل NDS ERP</h3><p>يجمع المصمم بين تنظيم التقارير، ومرونة الحقول، وتحسين قراءة النتائج، وتتبع الإصدارات والتشغيل. وتنعكس هذه الوظائف على سرعة الوصول للمعلومة، وتقليل تكرار إعداد التقارير، وتحسين قابلية مراجعة النتائج.</p></article>',
   '<article class="card rv"><h3>حالة التطوير والتحقق</h3><p>الفحص السابق أثبت وجود ثلاثة Doctypes مخصصة وسجلات تقارير فعلية. كما يثبت سجل NX3 تعديل المصدر، واجتياز فحص صياغة JavaScript، ونجاح بناء amir_theme_v16.</p><p class="mut" style="margin-top:10px">لم يثبت بعد تنفيذ clear-cache أو إجراء فحص بصري نهائي بعد التفعيل؛ لذلك تبقى هذه الخطوة قيد التحقق ولا تُسجّل كقبول تشغيلي مكتمل.</p><span class="sp warn"><i class="dot"></i>مبني — ينتظر التفعيل والتحقق النهائي</span></article></div>',
   '<div class="sec rv"><div class="tech report-studio-cta"><b>فتح الوحدة</b><span>مصمم التقارير في النسخة السعودية فقط — يفتح في نافذة مستقلة.</span><a class="sp info" href="' + MODULE_URL + '" target="_blank" rel="noopener"><i class="dot"></i>فتح مصمم التقارير ↗</a></div></div>',
-  '</div></section>'
+  '</div></section><script src="report-studio-enhance.js"></script>'
 ].join("\n");
 
 const fullPage = [
@@ -178,8 +178,6 @@ function run() {
     full = fullReportPatch(full);
     if (!index.includes('href="#s13"') || !index.includes('id="s13"')) throw new Error("Main report page/navigation verification failed");
     if (!full.includes('href="#s11"') || !full.includes('id="s11"')) throw new Error("Full report page/TOC verification failed");
-    const scriptTag = '<script src="report-studio-enhance.js"></script>';
-    if (!index.includes(scriptTag)) index = replaceExactlyOnce(index, "</body>", scriptTag + "\n</body>", "Install engineering log card enhancer");
     fs.writeFileSync(INDEX_PATH, index, "utf8");
     fs.writeFileSync(FULL_PATH, full, "utf8");
   } else {
