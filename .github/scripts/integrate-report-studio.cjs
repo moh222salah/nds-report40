@@ -184,6 +184,12 @@ function run() {
     console.log("Report Studio HTML pages already exist.");
   }
 
+  const helperTag = '<script src="report-studio-enhance.js"></script>';
+  if (!full.includes(helperTag)) {
+    full = replaceExactlyOnce(full, '<section class="pg" id="s5">', helperTag + '<section class="pg" id="s5">', "Install engineering log card enhancer in full report");
+    fs.writeFileSync(FULL_PATH, full, "utf8");
+  }
+
   console.log("REPORT_STUDIO_PATCH=OK");
   console.log("MAIN_PAGE=07 | ENGINEERING_LOG=08");
   console.log("FULL_REPORT_PRINT_PAGE=07 | ENGINEERING_LOG_PRINT_PAGE=08");
