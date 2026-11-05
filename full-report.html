@@ -235,12 +235,12 @@ h2::after{content:"";display:block;width:64px;height:4px;border-radius:4px;backg
 <a href="#s2"><span class="n num">02</span>قبل وبعد — فاتورة المبيعات<span class="d"></span><span class="p num">04</span></a>
 <a href="#s3"><span class="n num">03</span>قبل وبعد — فاتورة المشتريات<span class="d"></span><span class="p num">05</span></a>
 <a href="#s4"><span class="n num">04</span>هندسة التنقل NDS Nav<span class="d"></span><span class="p num">06</span></a>
-<a href="#s5"><span class="n num">05</span>سجل الأعمال الهندسية<span class="d"></span><span class="p num">07</span></a>
-<a href="#s6"><span class="n num">06</span>معرض التحسينات — كل الشاشات<span class="d"></span><span class="p num">08</span></a>
-<a href="#s7"><span class="n num">07</span>الفواتير والمدفوعات وExcel<span class="d"></span><span class="p num">09</span></a>
-<a href="#s8"><span class="n num">08</span>بروتوكول التنفيذ ومستويات التحقق<span class="d"></span><span class="p num">10</span></a>
-<a href="#s9"><span class="n num">09</span>خطة التسعين يومًا<span class="d"></span><span class="p num">11</span></a>
-<a href="#s10"><span class="n num">10</span>الخاتمة والرؤية المستقبلية<span class="d"></span><span class="p num">12</span></a>
+<a href="#s11"><span class="n num">05</span>مصمم التقارير — NDS Report Studio<span class="d"></span><span class="p num">07</span></a><a href="#s5"><span class="n num">06</span>سجل الأعمال الهندسية<span class="d"></span><span class="p num">08</span></a>
+<a href="#s6"><span class="n num">07</span>معرض التحسينات — كل الشاشات<span class="d"></span><span class="p num">09</span></a>
+<a href="#s7"><span class="n num">08</span>الفواتير والمدفوعات وExcel<span class="d"></span><span class="p num">10</span></a>
+<a href="#s8"><span class="n num">09</span>بروتوكول التنفيذ ومستويات التحقق<span class="d"></span><span class="p num">11</span></a>
+<a href="#s9"><span class="n num">10</span>خطة التسعين يومًا<span class="d"></span><span class="p num">12</span></a>
+<a href="#s10"><span class="n num">11</span>الخاتمة والرؤية المستقبلية<span class="d"></span><span class="p num">13</span></a>
 </nav>
 <div class="sand sg" style="margin-top:40px"><i class="ico" data-i="shield" style="margin:0"></i><div><b>هدف واحد من البداية للنهاية</b><p class="mut">أي تعديل يُنفَّذ في موضعه الصحيح، ويمكن تتبع أثره والتراجع عنه.</p></div></div>
 </div></section>
@@ -325,9 +325,22 @@ h2::after{content:"";display:block;width:64px;height:4px;border-radius:4px;backg
 <p class="mut sand" style="margin-top:20px">بناء الأصول وفحص استجابتها موثقان. القبول البصري الشامل على الأجهزة والمتصفحات يحتاج اختبارًا مستقلًا.</p>
 </div></section>
 
-<section class="pg" id="s5"><div class="wrap">
-<div class="big num">05</div>
-<span class="kick"><span class="pill">05</span>ENGINEERING LOG</span>
+<!-- NDS REPORT STUDIO FULL PAGE -->
+<section class="pg report-studio-full-page" id="s11"><div class="wrap">
+<div class="big num">05</div><span class="kick"><span class="pill">05</span>NDS REPORT STUDIO</span><h2>مصمم التقارير</h2>
+<p class="lead">مساحة عمل داخل النسخة السعودية لتنظيم التقارير وحقولها وتشغيلها ومتابعة إصداراتها وسجل تنفيذها، مع مراعاة صلاحيات المستخدم.</p>
+<div class="g sec">
+<article class="card"><h3>تعريف التقارير</h3><p>إدارة سجلات التقارير المحفوظة وتنظيمها، بما يسهّل إعادة الاستخدام ومراجعة تعريف التقرير.</p></article>
+<article class="card"><h3>الحقول والجدول</h3><p>التحكم في الحقول الظاهرة، والترتيب حسب العمود، وتحسين قراءة النتائج من خلال رأس ثابت وعمود أول ثابت وإجماليات وشارات حالة.</p></article>
+<article class="card"><h3>الإصدارات وسجل التشغيل</h3><p>توجد ثلاثة Doctypes مخصصة وسجلات تقارير فعلية، مع فصل تعريف التقرير وإصداراته وسجل تشغيله ضمن بنية الوحدة.</p></article>
+<article class="card"><h3>الصلاحيات</h3><p>تُقرأ بيانات التقارير عبر frappe.client.get_list وفق صلاحيات المستخدم، بما يدعم حوكمة الوصول إلى المعلومات.</p></article>
+</div>
+<div class="card sec"><h3>القيمة التشغيلية</h3><p>يساعد المصمم على تقليل استخراج البيانات يدويًا، وتوحيد التقارير المتكررة، وتسريع متابعة المؤشرات، وتوفير مسار أوضح لمراجعة تعريفات التقارير وإصداراتها وعمليات تشغيلها.</p></div>
+<div class="chips sec"><span class="chip">تعريفات تقارير منظمة</span><span class="chip">حقول قابلة للتخصيص</span><span class="chip">تتبع الإصدارات والتشغيل</span><span class="chip">مراعاة صلاحيات المستخدم</span></div>
+<div class="card sec"><h3>حالة التنفيذ والتحقق</h3><p>سجل الفحص يثبت وجود ثلاثة Doctypes وسجلات تقارير فعلية، كما يثبت تعديل مصدر NX3 وفحص صياغة JavaScript ونجاح بناء تطبيق amir_theme_v16.</p><p class="mut">لم يثبت بعد تنفيذ clear-cache أو اختبار الواجهة بصريًا بعد التفعيل؛ لذلك تُصنّف تحسينات NX3 بأنها «مبنية — بانتظار التفعيل والتحقق النهائي»، لا قبولًا تشغيليًا مكتملًا.</p><p><a href="https://ndserpsa.nds-sa.com/desk/nds-reports" target="_blank" rel="noopener">فتح مصمم التقارير في النسخة السعودية ↗</a></p></div>
+</div></section><section class="pg" id="s5"><div class="wrap">
+<div class="big num">06</div>
+<span class="kick"><span class="pill">06</span>ENGINEERING LOG</span>
 <h2>سجل الإنجازات التقنية</h2>
 <p class="lead">سبع وعشرون مهمة موزعة على ستة محاور، لكل مهمة مستوى إثبات يوضح ما تحقق فعليًا.</p>
 <div class="lv" id="lv"></div>
@@ -336,8 +349,8 @@ h2::after{content:"";display:block;width:64px;height:4px;border-radius:4px;backg
 </div></section>
 
 <section class="pg" id="s6"><div class="wrap">
-<div class="big num">06</div>
-<span class="kick"><span class="pill">06</span>SYSTEM SHOWCASE</span>
+<div class="big num">07</div>
+<span class="kick"><span class="pill">07</span>SYSTEM SHOWCASE</span>
 <h2>معرض التحسينات — كل الشاشات في صفحة واحدة</h2>
 <p class="lead">من سطح المكتب والفواتير إلى القوائم الجانبية ولوحات الوحدات. اسحب التبويبات أفقيًا، واضغط أي شاشة لتكبيرها.</p>
 <div class="htabs" id="htabs" role="tablist" aria-label="شاشات المنظومة"></div>
@@ -347,8 +360,8 @@ h2::after{content:"";display:block;width:64px;height:4px;border-radius:4px;backg
 <div class="ctl" id="hc"></div>
 </div></section>
 <section class="pg" id="s7"><div class="wrap">
-<div class="big num">07</div>
-<span class="kick"><span class="pill">07</span>INVOICES & PAYMENTS</span>
+<div class="big num">08</div>
+<span class="kick"><span class="pill">08</span>INVOICES & PAYMENTS</span>
 <h2>الفواتير والمدفوعات وExcel</h2>
 <p class="lead">ربط تجربة المستخدم بالدورة المحاسبية، بحيث لا تختلف حالة المستند عن حركته المالية.</p>
 <div class="g sec" style="grid-template-columns:repeat(auto-fit,minmax(300px,1fr))">
@@ -365,8 +378,8 @@ h2::after{content:"";display:block;width:64px;height:4px;border-radius:4px;backg
 </div></section>
 
 <section class="pg dk" id="s8"><div class="wrap">
-<div class="big num">08</div>
-<span class="kick"><span class="pill">08</span>FAST EXECUTION</span>
+<div class="big num">09</div>
+<span class="kick"><span class="pill">09</span>FAST EXECUTION</span>
 <h2>بروتوكول التنفيذ ومستويات التحقق</h2>
 <p class="lead">دورة تنفيذ سريعة ومنضبطة تجمع بين سرعة الإنجاز وحماية الإنتاج، وتمنع إعلان نجاح غير مثبت.</p>
 <div class="g sec">
@@ -382,8 +395,8 @@ h2::after{content:"";display:block;width:64px;height:4px;border-radius:4px;backg
 </div></section>
 
 <section class="pg" id="s9"><div class="wrap">
-<div class="big num">09</div>
-<span class="kick"><span class="pill">09</span>90-DAY ROADMAP</span>
+<div class="big num">10</div>
+<span class="kick"><span class="pill">10</span>90-DAY ROADMAP</span>
 <h2>خطة التسعين يومًا</h2>
 <p class="lead">من المعالجة الهندسية إلى مكاسب تشغيلية قابلة للقياس، على ثلاث مراحل متدرجة.</p>
 <div class="rm rv" dir="rtl"><div style="background:#8fa89d;color:#10261e">الاستقرار<small>M1 · 1–30</small></div><div style="background:#0f6b50;color:#fff">التكامل<small>M2 · 31–60</small></div><div style="background:#c9a84c;color:#1b1608">الإنتاجية<small>M3 · 61–90</small></div></div>
@@ -398,8 +411,8 @@ h2::after{content:"";display:block;width:64px;height:4px;border-radius:4px;backg
 </div></section>
 
 <section class="pg dk" id="s10"><div class="wrap">
-<div class="big num">10</div>
-<span class="kick"><span class="pill">10</span>VISION</span>
+<div class="big num">11</div>
+<span class="kick"><span class="pill">11</span>VISION</span>
 <h2>من تطوير النظام إلى منظومة أكثر نضجًا واستدامة</h2>
 <p class="lead">الهدف ليس واجهات أجمل أو وظائف أكثر فحسب، بل منظومة متماسكة يمكن تطويرها بثقة وتشغيلها بكفاءة وصيانتها بأقل مخاطر.</p>
 <div class="chips sec rv"><span class="chip">واجهات موحدة وهوية احترافية</span><span class="chip">مساحات عمل مستقرة</span><span class="chip">دورة فواتير ومدفوعات موثوقة</span><span class="chip">تكامل المبيعات والمشتريات والحسابات والمخازن</span><span class="chip">تخصيصات مستقلة قابلة للصيانة</span><span class="chip">نشر واختبار أكثر أمانًا</span><span class="chip">بيئة اختبار تحمي الإنتاج</span><span class="chip">مؤشرات أداء للإدارة</span></div>
@@ -412,7 +425,7 @@ h2::after{content:"";display:block;width:64px;height:4px;border-radius:4px;backg
 </div></section>
 
 <div class="hlb" id="hlb" role="dialog" aria-modal="true" aria-label="عرض مكبر"><div class="hlt"><button type="button" data-s="b">قبل</button><button type="button" data-s="a">بعد</button><button type="button" data-s="x">إغلاق ✕</button></div><div class="hli"><img id="hli" alt=""></div></div>
-<nav id="dock" aria-label="التنقل بين الأقسام"><a class="num" href="#s1">01</a><a class="num" href="#s2">02</a><a class="num" href="#s3">03</a><a class="num" href="#s4">04</a><a class="num" href="#s5">05</a><a class="num" href="#s6">06</a><a class="num" href="#s7">07</a><a class="num" href="#s8">08</a><a class="num" href="#s9">09</a><a class="num" href="#s10">10</a></nav>
+<nav id="dock" aria-label="التنقل بين الأقسام"><a class="num" href="#s1">01</a><a class="num" href="#s2">02</a><a class="num" href="#s3">03</a><a class="num" href="#s4">04</a><a class="num" href="#s11">05</a><a class="num" href="#s5">06</a><a class="num" href="#s6">07</a><a class="num" href="#s7">08</a><a class="num" href="#s8">09</a><a class="num" href="#s9">10</a><a class="num" href="#s10">11</a></nav>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
 <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="m9 12 2 2 4-4"/></symbol>
 <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6 7-11a7 7 0 0 0-14 0c0 5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></symbol>

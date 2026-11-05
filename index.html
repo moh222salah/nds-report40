@@ -486,7 +486,7 @@ html{scroll-padding-top:var(--navh,64px)}
 <header class="nav" id="nav"><div class="w nav-in">
 <a class="logo" href="#top"><span class="mark">N</span><b>NDS ERP</b></a><span class="curT" id="curT" aria-live="polite"></span>
 <nav class="chs" id="chs" aria-label="فصول التقرير">
-<a href="#s1"><i></i><span>الخلاصة</span></a><a href="#s2"><i></i><span>الرحلة</span></a><a href="#s3"><i></i><span>البداية</span></a><a href="#s4"><i></i><span>الواجهة</span></a><a href="#s5"><i></i><span>الفواتير</span></a><a href="#s6"><i></i><span>الدفع</span></a><a href="#s11"><i></i><span>السجل الهندسي</span></a><a href="#s7"><i></i><span>الحماية</span></a><a href="#s7b"><i></i><span>بيئة الاختبار</span></a><a href="#s8"><i></i><span>الشفافية</span></a><a href="#s9"><i></i><span>الطريق</span></a><a href="#s12"><i></i><span>الملاحق</span></a><a href="#s10"><i></i><span>الختام</span></a>
+<a href="#s1"><i></i><span>الخلاصة</span></a><a href="#s2"><i></i><span>الرحلة</span></a><a href="#s3"><i></i><span>البداية</span></a><a href="#s4"><i></i><span>الواجهة</span></a><a href="#s5"><i></i><span>الفواتير</span></a><a href="#s6"><i></i><span>الدفع</span></a><a href="#s13"><i></i><span>مصمم التقارير</span></a><a href="#s11"><i></i><span>السجل الهندسي</span></a><a href="#s7"><i></i><span>الحماية</span></a><a href="#s7b"><i></i><span>بيئة الاختبار</span></a><a href="#s8"><i></i><span>الشفافية</span></a><a href="#s9"><i></i><span>الطريق</span></a><a href="#s12"><i></i><span>الملاحق</span></a><a href="#s10"><i></i><span>الختام</span></a>
 </nav>
 <div class="tools"><button class="tbtn" id="vw" aria-label="عرض الإدارة" type="button" aria-haspopup="dialog" aria-controls="mgModal"><svg viewBox="0 0 24 24"><use href="#i-eye"/></svg><span class="lbl" id="vwl">عرض الإدارة</span></button><button class="tbtn" id="th" type="button" aria-label="تبديل الثيم"><svg viewBox="0 0 24 24"><use href="#i-sun"/></svg></button><button class="tbtn" id="mn" type="button" aria-label="فصول التقرير" aria-expanded="false" aria-controls="chs"><svg viewBox="0 0 24 24"><use href="#i-grid"/></svg></button></div>
 </div><div class="prog"><i id="bar"></i></div></header>
@@ -609,14 +609,28 @@ html{scroll-padding-top:var(--navh,64px)}
 <div class="card rv sec" style="display:flex;gap:16px;align-items:flex-start"><div class="ico live" data-i="cart" style="margin:0"></div><div><div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center"><h3>نقاط البيع</h3><span class="sp warn"><i class="dot"></i>منفّذ ويحتاج تحققًا وظيفيًا</span></div><p>تصميم «نقاط البيع» بما يتسق مع المساحات الأخرى، واختبار فاتورة كاشير بوردية افتتاح: 5 قطع، 250.00 + ضريبة 37.50 = 287.50 ريال.</p></div></div>
 </div></section>
 
-<section class="ch" id="s11"><div class="w">
-<div class="chh rv"><span class="big num">07</span><span class="kick"><span class="pill">07</span>Engineering log</span><h2>السجل الهندسي الكامل</h2>
+<!-- NDS REPORT STUDIO PAGE -->
+<section class="ch alt report-studio-chapter" id="s13"><div class="w">
+<div class="chh rv"><span class="big num">07</span><span class="kick"><span class="pill">07</span>NDS Report Studio</span><h2>مصمم التقارير</h2>
+<p class="lead">مساحة تقارير داخل NDS ERP Saudi لتنظيم تعريفات التقارير وحقولها، وتشغيلها، ومتابعة إصداراتها وسجل تنفيذها، مع احترام صلاحيات المستخدم.</p>
+<div class="take"><i class="dot"></i><div><b>من بيانات النظام إلى رؤية أوضح:</b> تنظيم عملية إعداد التقرير وتشغيله داخل بيئة ERP بدل الاعتماد على تجميع يدوي متكرر للبيانات.</div></div></div>
+<div class="g sec report-studio-feature-grid">
+<article class="card hov rv"><div class="ico live" data-i="sheet"></div><h3>تعريف التقارير وتنظيمها</h3><p>مساحة موحدة لإدارة التقارير المحفوظة وسجلاتها، بما يساعد على إعادة استخدام تعريف التقرير ومراجعته بدل تكرار إعداداته في كل مرة.</p><div class="tech"><b>القيمة العملية</b><span>تقليل الأعمال اليدوية وتوحيد طريقة الوصول إلى التقارير المتكررة.</span></div></article>
+<article class="card hov rv"><div class="ico live" data-i="layout"></div><h3>الحقول وطريقة العرض</h3><p>تخصيص الحقول الظاهرة، وإظهار الأعمدة أو إخفاؤها للعرض، والترتيب بالضغط على عنوان العمود، مع تصميم جدول يسهّل متابعة البيانات والإجماليات.</p><div class="tech"><b>تحسين NX3</b><span>رأس كحلي ثابت، عمود أول ثابت، صف إجماليات ثابت، شارات حالة وتظليل متبادل.</span></div></article>
+<article class="card hov rv"><div class="ico live" data-i="card"></div><h3>الإصدارات والتشغيل</h3><p>توجد بنية مخصصة لإدارة تعريفات التقارير وإصداراتها وسجل تشغيلها، مع وجود سجلات تقارير فعلية ضمن النسخة السعودية.</p><div class="tech"><b>القيمة العملية</b><span>وضوح أكبر في متابعة التقرير وإصداراته وعمليات تشغيله.</span></div></article>
+<article class="card hov rv"><div class="ico live" data-i="lock"></div><h3>الصلاحيات وحوكمة البيانات</h3><p>قراءة بيانات التقارير تمر عبر frappe.client.get_list وفق صلاحيات المستخدم؛ فلا ينبغي أن تمنح شاشة التقارير وصولًا أوسع من أذونات الحساب.</p><div class="tech"><b>القيمة للعملاء</b><span>تقارير أقرب إلى احتياج كل دور، مع الحفاظ على ضوابط الوصول إلى البيانات.</span></div></article>
+</div>
+<div class="g2 sec"><article class="card rv"><h3>أثر المصمم داخل NDS ERP</h3><p>يجمع المصمم بين تنظيم التقارير، ومرونة الحقول، وتحسين قراءة النتائج، وتتبع الإصدارات والتشغيل. وتنعكس هذه الوظائف على سرعة الوصول للمعلومة، وتقليل تكرار إعداد التقارير، وتحسين قابلية مراجعة النتائج.</p></article>
+<article class="card rv"><h3>حالة التطوير والتحقق</h3><p>الفحص السابق أثبت وجود ثلاثة Doctypes مخصصة وسجلات تقارير فعلية. كما يثبت سجل NX3 تعديل المصدر، واجتياز فحص صياغة JavaScript، ونجاح بناء amir_theme_v16.</p><p class="mut" style="margin-top:10px">لم يثبت بعد تنفيذ clear-cache أو إجراء فحص بصري نهائي بعد التفعيل؛ لذلك تبقى هذه الخطوة قيد التحقق ولا تُسجّل كقبول تشغيلي مكتمل.</p><span class="sp warn"><i class="dot"></i>مبني — ينتظر التفعيل والتحقق النهائي</span></article></div>
+<div class="sec rv"><div class="tech report-studio-cta"><b>فتح الوحدة</b><span>مصمم التقارير في النسخة السعودية فقط — يفتح في نافذة مستقلة.</span><a class="sp info" href="https://ndserpsa.nds-sa.com/desk/nds-reports" target="_blank" rel="noopener"><i class="dot"></i>فتح مصمم التقارير ↗</a></div></div>
+</div></section><script src="report-studio-enhance.js"></script><section class="ch" id="s11"><div class="w">
+<div class="chh rv"><span class="big num">08</span><span class="kick"><span class="pill">08</span>Engineering log</span><h2>السجل الهندسي الكامل</h2>
 <p class="lead">سبع وعشرون مهمة موزعة على ستة محاور. اللون يوضح أعلى دليل موثق لكل مهمة. مستوى الإثبات لا يعني حالة التسليم؛ حالة التسليم في فصل الشفافية.</p></div>
 <div class="lv" id="lv"></div><div class="flt" id="flt"></div><div class="g2" id="tasks" style="align-items:stretch"></div>
 </div></section>
 
 <section class="ch dk" id="s7"><div class="w">
-<div class="chh rv"><span class="big num">08</span><span class="kick"><span class="pill">08 · أ</span>Safe change</span><h2>كيف نحمي النظام أثناء التطوير؟</h2>
+<div class="chh rv"><span class="big num">09</span><span class="kick"><span class="pill">09 · أ</span>Safe change</span><h2>كيف نحمي النظام أثناء التطوير؟</h2>
 <p class="lead">نظام مالي لا يُجرَّب عليه. كل تعديل يمر بدورة ثابتة، وكل ادعاء بنجاح يحتاج دليلًا.</p>
 <div class="take"><i class="dot"></i><div><b>في سطر:</b> نغيّر أقل ما يلزم، في طبقة منفصلة، بعد نسخة احتياطية، ومعنا طريق عودة جاهز.</div></div></div>
 <div class="rg rv"><div class="ring" id="ring"><div class="ct"><span><small>SAFE CHANGE</small>دورة التغيير<br>الآمن</span></div></div><div class="stl" id="stl"></div></div>
@@ -638,7 +652,7 @@ html{scroll-padding-top:var(--navh,64px)}
 </div></section>
 
 <section class="ch" id="s7b"><div class="w">
-<div class="chh rv"><span class="big num">08</span><span class="kick"><span class="pill">08 · ب</span>Test environment</span><h2>تجهيز بيئة اختبار مستقلة</h2>
+<div class="chh rv"><span class="big num">09</span><span class="kick"><span class="pill">09 · ب</span>Test environment</span><h2>تجهيز بيئة اختبار مستقلة</h2>
 <p class="lead">كانت التجارب تتم قرب الإنتاج. الحل: بيئة تجربة منفصلة بلا بيانات مالية، تُبنى بعد نسخة احتياطية كاملة.</p>
 <div class="take"><i class="dot"></i><div><b>في سطر:</b> نجرّب على نسخة معزولة بلا بيانات مالية، ولا نقترب من الإنتاج.</div></div></div>
 <div class="g sec">
@@ -656,7 +670,7 @@ html{scroll-padding-top:var(--navh,64px)}
 </div></section>
 
 <section class="ch" id="s8"><div class="w">
-<div class="chh rv"><span class="big num">09</span><span class="kick"><span class="pill">09</span>Transparency</span><h2>الصورة الصريحة: ما اكتمل وما لم يكتمل</h2>
+<div class="chh rv"><span class="big num">10</span><span class="kick"><span class="pill">10</span>Transparency</span><h2>الصورة الصريحة: ما اكتمل وما لم يكتمل</h2>
 <p class="lead">تقرير يُعتمد عليه يفصل المثبت عن غير المثبت. هذه هي الحالة بلا تجميل.</p></div>
 <div class="stt-t rv" id="stt"></div>
 <div class="g2 sec">
@@ -673,7 +687,7 @@ html{scroll-padding-top:var(--navh,64px)}
 </div></section>
 
 <section class="ch alt" id="s9"><div class="w">
-<div class="chh rv"><span class="big num">10</span><span class="kick"><span class="pill">10</span>Roadmap</span><h2>خارطة الطريق: ماذا بعد؟</h2>
+<div class="chh rv"><span class="big num">11</span><span class="kick"><span class="pill">11</span>Roadmap</span><h2>خارطة الطريق: ماذا بعد؟</h2>
 <p class="lead">تبدأ بما طلبته الإدارة مباشرة، وهو نقل نمط المبيعات إلى المشتريات، ثم تتدرج نحو منتج موثوق وذكي.</p></div>
 <div class="rail rv"><div>مرحلة أولى</div><div>مرحلة ثانية</div><div>مرحلة ثالثة</div><i></i></div>
 <div class="hz3">
@@ -707,7 +721,7 @@ html{scroll-padding-top:var(--navh,64px)}
 </div></section>
 
 <section class="ch dk" id="s10"><div class="w">
-<div class="chh rv"><span class="big num">11</span><span class="kick"><span class="pill">11</span>What we need · Closing</span><h2>ما يحتاجه الفريق للنجاح</h2>
+<div class="chh rv"><span class="big num">12</span><span class="kick"><span class="pill">12</span>What we need · Closing</span><h2>ما يحتاجه الفريق للنجاح</h2>
 <p class="lead">مسؤولية مشتركة. هذه أربعة أمور من الإدارة ترفع جودة التسليم وسرعته.</p></div>
 <div class="g">
 <div class="card hov rv"><div class="ico live" data-i="flag"></div><h3>مسؤول فني</h3><p>يعتمد الأولويات ومعايير القبول كتابيًا.</p></div>
